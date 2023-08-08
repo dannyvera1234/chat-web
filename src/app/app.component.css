@@ -1,0 +1,8 @@
+main{
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+  }
+  main.min-main{
+    margin-left: 80px;
+  }
