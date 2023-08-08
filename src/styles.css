@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Outfit:wght@500&family=Poppins:ital,wght@0,100;0,200;1,200;1,300&family=Roboto:wght@300;400;700&display=swap");
 
 :root {
-  
-  
-  --color-barra-lateral: rgb(255, 255, 255);
+  /* --color-barra-lateral: rgb(255, 255, 255);
   --color-texto: rgb(0, 0, 0);
   --color-texto-menu: rgb(0, 0, 0);
   --color-boton: rgb(0, 0, 0);
@@ -14,10 +12,19 @@
   --color-switch-circulo: rgb(241, 241, 241);
   --color-scroll: rgb(192, 192, 192);
   --color-scroll-hover: rgb(134, 134, 134);
-  --color-titulo:rgb(9,112,20);
-
-
-
+  --color-titulo: rgb(9, 112, 20); */
+  --color-barra-lateral: rgb(44, 45, 49);
+  --color-texto: rgb(255, 255, 255);
+  --color-texto-menu: rgb(236, 236, 241);
+  --color-boton: rgb(0, 0, 0);
+  --color-boton-texto: rgb(238, 238, 238);
+  --color-menu-hover: rgb(0, 0, 0);
+  --color-linea: rgb(39, 205, 64);
+  --color-switch-base: rgb(236, 236, 236);
+  --color-switch-circulo: rgb(71, 71, 78);
+  --color-scroll: rgb(68, 69, 74);
+  --color-scroll-hover: rgb(85, 85, 85);
+  --color-titulo: rgb(255, 255, 255);
 }
 
 .dark-mode {
@@ -32,7 +39,7 @@
   --color-switch-circulo: rgb(71, 71, 78);
   --color-scroll: rgb(68, 69, 74);
   --color-scroll-hover: rgb(85, 85, 85);
-  --color-titulo:rgb(255, 255, 255);
+  --color-titulo: rgb(255, 255, 255);
 }
 * {
   margin: 0;
@@ -43,8 +50,7 @@
 body {
   height: 100vh;
   width: 100%;
-  background-color: #edede9; 
-  
+  background-color: rgb(17,27,33);
 }
 .menu {
   position: fixed;
@@ -247,12 +253,10 @@ body {
   font-size: 20px;
 }
 /* main */
-#inbox{
+#inbox {
   background-color: var(--color-menu-hover);
   color: var(--color-texto-menu);
 }
-
-
 
 /* responsive */
 @media (max-height: 660px) {
@@ -270,8 +274,7 @@ body {
   }
   .max-barra-lateral {
     left: 0;
-   position: absolute;
-   
+    position: absolute;
   }
   .menu {
     display: flex;
@@ -279,12 +282,11 @@ body {
   .menu ion-icon:nth-child(2) {
     display: none;
   }
-  main{
+  main {
     margin-left: 0;
     position: relative;
-    
   }
-  main.min-main{
+  main.min-main {
     margin-left: 0;
   }
 }
