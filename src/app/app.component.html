@@ -1,39 +1,42 @@
+
+
+
 <!-- <router-outlet></router-outlet> -->
 
 
-<div class="menu" (click)="onOcultar()">
-    <ion-icon name="menu-outline"></ion-icon>
-    <ion-icon name="close-outline"></ion-icon>
-</div>
-<div class="barra-lateral" #barralateral>
-    <div>
-        <div class="nombre-pagina">
-            <ion-icon id="cloud" name="chatbubbles-outline" (click)="onClickIcono()"></ion-icon>
-            <span>CHAT MASIVO</span>
-        </div>
+    <div class="menu" (click)="onOcultar()">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
     </div>
-    <nav class="navegacion">
-        <ul>
-            <li><a href="#"><ion-icon name="accessibility-outline"></ion-icon>
-                    <span>inicio</span></a></li>
-            <li><a href="#"><ion-icon name="bag-add-outline"></ion-icon>
-                    <span>contacto</span></a></li>
-            <li><a href="#"><ion-icon name="briefcase-outline"></ion-icon>
-                    <span>trabajo</span></a></li>
-            <li><a href="#" id="inbox"><ion-icon name="chatbubbles-outline"></ion-icon>
-                    <span>chat</span></a></li>
-            <li><a href="#"><ion-icon name="construct-outline"></ion-icon>
-                    <span>configuracion</span></a></li>
-            <li><a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>
-                    <span>confi</span></a></li>
-            <li><a href="#"><ion-icon name="construct-outline"></ion-icon>
-                    <span>configuracion</span></a></li>
-        </ul>
-    </nav>
-    <div>
-        <div class="linea"> </div>
-        <div class="modo-oscuro">
-            <!-- <div class="info">
+    <div class="barra-lateral"  #barralateral>
+        <div>
+            <div class="nombre-pagina">
+                <ion-icon id="cloud" name="chatbubbles-outline" (click)="onClickIcono()"></ion-icon>
+                <span>CHAT MASIVO</span>
+            </div>
+        </div>
+        <nav class="navegacion">
+            <ul>
+                <li><a  href="#"><ion-icon name="accessibility-outline"></ion-icon>
+                        <span>inicio</span></a></li>
+                <li><a href="#"><ion-icon name="bag-add-outline"></ion-icon>
+                        <span>contacto</span></a></li>
+                <li><a href="#"><ion-icon name="briefcase-outline"></ion-icon>
+                        <span>trabajo</span></a></li>
+                <li><a href="#" id="inbox"><ion-icon name="chatbubbles-outline"></ion-icon>
+                        <span>chat</span></a></li>
+                <li><a href="#"><ion-icon name="construct-outline"></ion-icon>
+                        <span>configuracion</span></a></li>
+                <li><a href="#"><ion-icon name="chatbubbles-outline"></ion-icon>
+                        <span>confi</span></a></li>
+                <li><a href="#"><ion-icon name="construct-outline"></ion-icon>
+                        <span>configuracion</span></a></li>
+            </ul>
+        </nav>
+        <div>
+            <div class="linea"> </div>
+            <div class="modo-oscuro">
+                <div class="info">
                     <ion-icon name="moon-outline"></ion-icon>
                     <span>Modo Oscuro</span>
                 </div>
@@ -44,20 +47,23 @@
 
                         </div>
                     </div>
-                </div> -->
-        </div>
-        <div class="usuario">
-            <img src="../assets/chat_masivo.png" alt="">
-            <div class="info-usuario">
-                <div class="nombre-email">
-                    <span class="nombre">daniel vera</span>
-                    <span class="email">asdjahd@g,ial.com</span>
                 </div>
-                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+            <div class="usuario">
+                <img src="../assets/chat_masivo.png" alt="">
+                <div class="info-usuario">
+                    <div class="nombre-email">
+                        <span class="nombre">daniel vera</span>
+                        <span class="email">asdjahd@g,ial.com</span>
+                    </div>
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<main #mainmenu>
-    <app-chat-web></app-chat-web>
-</main>
+    <main #mainmenu>
+        <app-chat-web></app-chat-web>
+    </main>
+
+
+
