@@ -8,16 +8,12 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 export class AppComponent {
   title = 'sidebar';
 
- 
-
   @ViewChild('barralateral') barralateralde: ElementRef;
   @ViewChild('mainmenu') mainmenu: ElementRef;
   @ViewChild('switchblack') switchblack: ElementRef;
   constructor(private renderer: Renderer2) {
-   
+    this.setupMediaQueryListener();
   }
-
-  
 
   onClickIcono() {
     const classCurrent: any[] = [
@@ -69,8 +65,7 @@ export class AppComponent {
       this.renderer.addClass(this.switchblack.nativeElement, 'prendido');
     }
   }
-  onOcultar(){
-    
+  onOcultar() {
     const classCurrent: any[] = [
       ...this.barralateralde.nativeElement.classList,
     ];
@@ -86,7 +81,33 @@ export class AppComponent {
         'max-barra-lateral'
       );
     }
+  }
 
+  setupMediaQueryListener() {
+    const mediaQuery = window.matchMedia('(max-width: 600px)'); // Define tu consulta de medios aquí
 
+    // Agregar un oyente para los cambios en la consulta de medios
+    mediaQuery.addEventListener('change', (event) => {
+      /**
+       * Si la pantalla en menor a 600px siempre se mostrara la barra lateral completa
+       */
+
+      const classCurrent: any[] = [
+        ...this.barralateralde.nativeElement.classList,
+      ];
+
+      if (classCurrent.includes('mini-barra-lateral')) {
+        this.renderer.removeClass(
+          this.barralateralde.nativeElement,
+          'mini-barra-lateral'
+        );
+      }
+      this.renderer.removeClass(
+        this.barralateralde.nativeElement,
+        'max-barra-lateral'
+      );
+
+      this.renderer.removeClass(this.mainmenu.nativeElement, 'min-main');
+    });
   }
 }
